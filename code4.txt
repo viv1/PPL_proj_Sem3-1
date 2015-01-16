@@ -1,0 +1,9 @@
+begin :
+double $cost=|||kurta;
+Univ $x;
+for each $x in $kr{
+if($x<>Button || $x<> Pocket || $x<>Sleeve || $x <> Emb){
+$cost= $cost + |||x;
+}
+^^$cost;
+:end

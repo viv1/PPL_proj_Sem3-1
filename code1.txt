@@ -1,0 +1,35 @@
+begin: #indicates start of our program
+Kurta $kr; #declare(and initialize to default values) kurta data
+#type
+$kr % m; #shirt size=M
+$kr % (1,255,0,0); #red color
+Button $bu ;
+$bu-> % m % (1,0,0,0); #button size = M, color=black
+$bu-> @f@mid@u;
+String $str="Embroidery image not found";
+bool $found=false;
+int $i;
+Emb $em;
+for each $i in (0,INF){ #if url is not found,the code will repeat
+if($found==false){
+try{
+$em->% "http://embroworld.com/Files/free-embroidery-design-146.jpg";
+$found=true;
+break;
+}catch{
+^^$str;
+}
+}
+}
+$em-> % s @ bd @ d ;
+Sleeve $sl;
+$sl-> % l % (1,255,0,0) ;
+$sl-> +$em;
+Collar $co;
+$co -> %(1,255,0,0) ;
+Pocket $po;
+$po-> %m % (1,255,0,0);
+$po->@f@u@r@cr;
+$kr-> +$bu*3 + $co + $po ; #add all the objects to the kurta
+^^$kr; #view kurta
+:end

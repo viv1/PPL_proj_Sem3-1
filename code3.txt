@@ -1,0 +1,29 @@
+begin:
+int $i;
+bool $b[50];
+for each $i in (0,50){
+$b[$i]=false; #initialize to false
+}
+for each $i in (0,50){
+Univ $x; #since we will be iterating over objects of different
+# data types,we have used universal data type
+for each $x in $Dress[50]{
+int $m;
+int $k=0; #counter to check the number of buttons
+for each $m in (0,4){
+if( $x<>Button==true){
+$k=$k+1; #increment the counter if button is found
+}
+}
+if($k==3){ #if the number of buttons is equal to 3
+$b[$x]=true;
+}
+}
+}
+for each $i in (0,50){
+if($b[$i]==true){
+^^$Dress[$i];
+^^; #implies go to next line after showing $Dress[$i];
+}
+}
+:end

@@ -1,0 +1,11 @@
+begin:
+int $i;
+for each $i in (0,50){ #iterate over the complete array
+Univ $x;
+for each $x in Shirts[$i]{ #iterate over all the objects in Shirts[$i]
+if($x<>Collar==true){ #if collar is found
+$Shirts[$i] ->- $x; # remove collar
+}
+}
+}
+:end
